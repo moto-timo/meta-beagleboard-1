@@ -250,6 +250,7 @@ SRC_URI += " \
 	file://net/0004-beaglebone-TT3201-MCP2515-fixes.patch \
 	file://net/0005-add-proper-db.txt-for-CRDA.patch \
 	file://net/0006-mcp251x-add-device-tree-support.patch \
+	file://net/0007-net-cpsw-fix-irq_disable-with-threaded-interrupts.patch \
 	file://drm/0001-am33xx-Add-clock-for-the-lcdc-DRM-driver.patch \
 	file://drm/0002-drm-small-fix-in-drm_send_vblank_event.patch \
 	file://drm/0003-drm-cma-add-debugfs-helpers.patch \
@@ -627,6 +628,9 @@ SRC_URI += " \
 	file://hdmi/0025-drm-tilcdc-fixup-mode-to-workaound-sync-for-tda998x.patch \
 	file://hdmi/0026-Documentation-for-tilcdc-Devicetree-Bindings.patch \
 	file://hdmi/0027-drm-tilcdc-adding-more-guards-to-prevent-selecting-i.patch \
+	file://audio/0001-Make-the-McASP-code-generic-again-remove-all-hardcod.patch \
+	file://audio/0002-ASoc-Davinci-EVM-Config-12MHz-CLK-for-AIC3x-Codec.patch \
+	file://audio/0003-ASoc-McASP-Lift-Reset-on-CLK-Dividers-when-RX-TX.patch \
 	file://resetctrl/0001-boneblack-Remove-default-pinmuxing-for-MMC1.patch \
 	file://resetctrl/0002-capemgr-Implement-cape-priorities.patch \
 	file://resetctrl/0003-rstctl-Reset-control-subsystem.patch \
@@ -702,10 +706,30 @@ SRC_URI += " \
 	file://capes/0016-DT-overlay-for-BeBoPr-Bridge-and-BeagleBone-any-colo.patch \
 	file://capes/0017-Removed-Whitelist-and-Blacklist-Modes-From-HDMI-Devi.patch \
 	file://capes/0018-beaglebone-capes-add-replicape-A2-and-A3-support.patch \
-	file://capes/0019-capes-Add-midi-cape-support.patch \
+	file://capes/0019-Added-camera-cape-support-for-Beaglebone-Black.patch \
+	file://capes/0020-capes-Add-midi-cape-support.patch \
+	file://capes/0021-remoteproc-PRU-lighting-remoteproc-support.patch \
+	file://capes/0022-Add-PRU-DTS-for-lighting-cape.patch \
+	file://capes/0023-capes-reorder-from-GRB-to-RGB-for-Lighting-cape.patch \
+	file://capes/0024-capes-return-written-bytes-for-faux-spidev-device.patch \
+	file://capes/0025-Fix-aspect-ratio-issue-of-720p-in-MT9M114-camera-cap.patch \
+	file://capes/0026-add-argus-ups-cape-support.patch \
 	file://fixes/0001-sync-don-t-block-the-flusher-thread-waiting-on-IO.patch \
 	file://fixes/0002-USB-Fix-USB-device-disconnects-on-resume.patch \
 	file://fixes/0003-beaglebone-switch-uSD-to-4-bit-mode.patch \
+	file://fixes/0004-mmc-omap_hsmmc-clear-status-flags-before-starting-a-.patch \
+	file://fixes/0005-omap-serial-allow-custom-buad-rate-settings.patch \
+	file://btrfs/0001-decompressor-add-LZ4-decompressor-module.patch \
+	file://btrfs/0002-lib-add-support-for-LZ4-compressed-kernel.patch \
+	file://btrfs/0003-lib-add-lz4-compressor-module.patch \
+	file://btrfs/0004-lib-lz4-correct-the-LZ4-license.patch \
+	file://btrfs/0005-lz4-fix-compression-decompression-signedness-mismatc.patch \
+	file://btrfs/0006-btrfs-prepare-incompat-flags-for-more-compression-me.patch \
+	file://btrfs/0007-btrfs-lz4-add-wrapper-functions-and-enable-it.patch \
+	file://btrfs/0008-btrfs-add-lz4hc-incompat-bits.patch \
+	file://btrfs/0009-btrfs-add-lz4hc-wrapper-and-enable-it.patch \
+	file://btrfs/0010-btrfs-reduce-duplicate-code-in-lz4_wrapper.c.patch \
+	file://btrfs/0011-btrfs-select-LZ4-HC-libs.patch \
 	file://defconfig \
   file://am335x-pm-firmware.bin \
   file://logo_linux_clut224.ppm \
